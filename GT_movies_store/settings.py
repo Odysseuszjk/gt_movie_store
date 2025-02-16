@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'gt_movies_store',
         'USER': 'root',
         'PASSWORD': '2340',
-        'HOST': 'db',
+        'HOST': '127.0.0.1',  # 改为实际的 MySQL 服务器地址
         'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4'
