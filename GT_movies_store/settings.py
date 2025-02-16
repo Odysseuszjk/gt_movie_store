@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'gt_movies_store',
         'USER': 'root',
         'PASSWORD': '2340',
-        'HOST': 'https://gtmoviestore-jasperkzhan9767-q9z1rvjc.leapcell.dev',  # 改为实际的 MySQL 服务器地址
+        'HOST': '0.0.0.0',  # 修改为部署环境的MySQL主机地址
         'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4'

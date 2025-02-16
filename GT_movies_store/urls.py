@@ -41,6 +41,7 @@ urlpatterns = [
     path('movies/', include('movies.urls')),
     path('accounts/', include('accounts.urls')),
     path('cart/', include('cart.urls')),
+    path('kaithhealthcheck', views.health_check, name='health_check'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
