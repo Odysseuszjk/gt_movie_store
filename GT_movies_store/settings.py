@@ -88,8 +88,16 @@ else:
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': DB_PATH,
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gt_movies_store',
+        'USER': 'root',
+        'PASSWORD': '2340',
+        'HOST': '127.0.0.1',  # 改用具体IP地址而不是localhost
+        'PORT': '3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
