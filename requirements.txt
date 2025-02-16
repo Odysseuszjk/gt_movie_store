@@ -1,2 +1,3 @@
 gunicorn
 django
+mysqlclient==2.2.0

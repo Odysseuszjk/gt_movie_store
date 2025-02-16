@@ -92,11 +92,10 @@ DATABASES = {
         'NAME': 'gt_movies_store',
         'USER': 'root',
         'PASSWORD': '2340',
-        'HOST': '127.0.0.1',  # 改用具体IP地址而不是localhost
+        'HOST': 'db',  # 使用 Docker 服务名
         'PORT': '3306',
         'OPTIONS': {
-            'charset': 'utf8mb4',
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            'charset': 'utf8mb4'
         }
     }
 }
