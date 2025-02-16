@@ -14,6 +14,7 @@ import os
 import sys
 import tempfile
 from pathlib import Path
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,13 +87,15 @@ if "LEAPCELL_ENV" in os.environ or sys.platform.startswith("linux"):
 else:
     DB_PATH = os.path.join(BASE_DIR, "db.sqlite3")  # ✅ Use /app/ for local development
 
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gt_movies_store',
         'USER': 'root',
         'PASSWORD': '2340',
-        'HOST': 'db',  # 使用 Docker 服务名
+        'HOST': 'db',
         'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4'
