@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'gt_movies_store',
         'USER': 'root',
         'PASSWORD': '2340',
-        'HOST': '0.0.0.0',  # 修改为部署环境的MySQL主机地址
+        'HOST': '0.0.0.0:8080',  # 修改为部署环境的MySQL主机地址
         'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4'
